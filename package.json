@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-prod": "next build && next export",
+    "deploy": "next build && next export && cp -r out docs && rm -rf out && git add . && git commit -m 'chore: build production' && git push origin master",
     "start": "next start",
     "lint": "next lint"
   },
